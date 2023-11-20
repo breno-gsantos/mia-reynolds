@@ -3,7 +3,6 @@ import { Alex_Brush, Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import NavContextProvider from '@/context/NavContext'
 
 const alexBrush = Alex_Brush({ 
   subsets: ['latin'],
@@ -28,7 +27,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <NavContextProvider>
       <html lang="en">  
         <body className={`${alexBrush.variable} ${montserrat.variable} overflow-x-hidden relative`}>
           <Header />
@@ -36,7 +34,5 @@ export default function RootLayout({
           <Footer />
         </body>
       </html>
-    </NavContextProvider>
-    
   )
 }

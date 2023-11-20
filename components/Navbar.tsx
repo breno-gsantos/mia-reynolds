@@ -1,11 +1,12 @@
 import {Link} from 'react-scroll';
+import {useMediaQuery} from 'react-responsive';
 
 interface NavbarProps{
     containerStyles: string;
     linkStyles: string;
 }
 
-const links = [
+export const links = [
     {
         path: 'home',
         label: 'Home'
@@ -25,10 +26,15 @@ const links = [
 ]
 
 export default function Navbar({containerStyles, linkStyles}: NavbarProps) {
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 1310px)'
+    })
+    console.log(isDesktop)
+
     return (
         <nav className={`${containerStyles}`}>
             {links.map((link) => (
-                <Link to={link.path} className={`${linkStyles} cursor-pointer border-b-2 border-transparent`} key={link.label} smooth spy offset={-50} activeClass='active'>
+                <Link to={link.path} className={`${linkStyles} cursor-pointer border-b-2 border-transparent`} key={link.label} smooth={!isDesktop ? false : true} spy offset={-50} activeClass='active'>
                     {link.label}
                 </Link>
             ))}
