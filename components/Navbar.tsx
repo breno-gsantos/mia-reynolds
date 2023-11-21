@@ -20,6 +20,10 @@ export const links = [
         label: 'Discography'
     },
     {
+        path: 'blog',
+        label: 'Blog'
+    },
+    {
         path: 'contact',
         label: 'Contact'
     },
@@ -29,7 +33,6 @@ export default function Navbar({containerStyles, linkStyles}: NavbarProps) {
     const isDesktop = useMediaQuery({
         query: '(min-width: 1310px)'
     })
-    console.log(isDesktop)
 
     return (
         <nav className={`${containerStyles}`}>
