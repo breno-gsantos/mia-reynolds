@@ -15,7 +15,7 @@ export default function MobileNav() {
       </SheetTrigger>
       <SheetContent>
         {links.map((link) => (
-            <Link to={link.path} className={`flex text-xl font-semibold flex-col text-center mt-32 cursor-pointer border-b-2 border-transparent`} key={link.label} smooth spy offset={-50} activeClass='active'>
+            <Link to={link.path} className={`flex text-xl font-semibold flex-col text-center mt-32 cursor-pointer`} key={link.label} smooth spy offset={-50} activeClass='active'>
                 {link.label}
             </Link>
         ))}

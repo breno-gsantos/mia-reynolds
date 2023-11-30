@@ -39,8 +39,6 @@ const config: Config = {
       }
     },
   },
-  plugins: [
-    require('tailwind-scrollbar')
-  ],
+  plugins: [require("tailwindcss-animate")],
 }
 export default config

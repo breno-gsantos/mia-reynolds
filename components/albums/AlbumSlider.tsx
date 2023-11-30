@@ -42,7 +42,7 @@ export default function AlbumSlider(){
 
     return (
         <>
-            <Swiper effect={'coverflow'} speed={1000} spaceBetween={80}  thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}} modules={{FreeMode, Navigation, Thumbs, EffectCoverflow}} coverflowEffect={{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}} className='album-slider'>
+            <Swiper effect={'coverflow'} speed={1000} spaceBetween={80}  thumbs={{swiper: thumbsSwiper && !thumbsSwiper ? thumbsSwiper : null}} coverflowEffect={{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}} className='album-slider'>
                 {data.map((album: Album) => (
                     <SwiperSlide key={album.id} className='mb-12'>
                         <div className='w-full bg-secondary/80 rounded-[10px] flex flex-col xl:flex-row items-center p-6 xl:p-12 gap-x-12'>
